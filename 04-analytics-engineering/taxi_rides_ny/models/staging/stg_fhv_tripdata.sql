@@ -10,8 +10,7 @@ with tripdata as
   select *,
     row_number() over(partition by dispatching_base_num, pickup_datetime) as rn
   from {{ source('staging','fhv_tripdata') }}
-  where dispatching_base_num is not null 
-  and SUBSTRING('pickup_datetime', 1, 4) = '2019'
+  where dispatching_base_num is not null and SUBSTRING(pickup_datetime, 1, 4) = '2019'
 )
 select
     -- identifiers
