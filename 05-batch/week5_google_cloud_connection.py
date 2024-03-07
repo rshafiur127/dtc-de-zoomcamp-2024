@@ -32,5 +32,7 @@ spark = SparkSession.builder \
 
 df_fhv = spark.read.parquet('gs://dtc-de-411905-week5/fhv/2019/10/*')
 
+
 df_fhv.show()
 
+df_fhv.count()
