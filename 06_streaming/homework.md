@@ -60,3 +60,20 @@ build.sh
 [spark]$ chmod u+x build.sh
 [spark]$ ./build.sh
 ```
+### Python environment
+
+```bash
+python3.8 -m venv .venv
+```
+```python
+pip3.8 install -r requirements.txt
+```
+```bash
+cat requirements.txt
+kafka-python==1.4.6
+confluent_kafka
+requests
+avro
+faust
+fastavro
+```
